@@ -11,6 +11,52 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .brand-mark-image {
+      object-fit: cover;
+      padding: 0;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .hero-art {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+      isolation: isolate;
+    }
+
+    .hero-art::before {
+      content: "";
+      position: absolute;
+      inset: 10% 0;
+      z-index: -1;
+      background: radial-gradient(circle at center, rgba(99, 171, 226, .20), rgba(99, 171, 226, 0) 68%);
+      filter: blur(10px);
+    }
+
+    .hero-art img {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 620px);
+      max-height: 620px;
+      object-fit: contain;
+      opacity: .98;
+      filter: drop-shadow(0 28px 52px rgba(0, 0, 0, .36));
+    }
+
+    @media (max-width: 900px) {
+      .hero-art {
+        min-height: 340px;
+      }
+
+      .hero-art img {
+        width: min(90vw, 520px);
+      }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -18,7 +64,7 @@
   <header class="site-header">
     <div class="shell nav-shell">
       <a class="brand" href="#top" aria-label="At The Dog House LLC home">
-        <span class="brand-mark" aria-hidden="true">DH</span>
+        <img class="brand-mark brand-mark-image" src="assets/favicon.png" alt="" width="48" height="48">
         <span>
           <strong>At The Dog House LLC</strong>
           <small>Proof-backed AI engineering</small>
