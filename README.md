@@ -15,4 +15,6 @@ The site intentionally avoids claims of customer results, live production runtim
 
 Published from `main` at the repository root.
 
+Link: https://kendomaschk.github.io/at-the-dog-house/
+
 **Powered by KenPire™**
